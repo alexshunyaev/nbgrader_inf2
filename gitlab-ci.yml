@@ -1,0 +1,11 @@
+image:
+  name: python
+  entrypoint: [""]
+
+build:
+  script:
+    - pip install nbgrader
+    - make -j$(nproc)
+  artifacts:
+    paths:
+      - "*-release/*/"
